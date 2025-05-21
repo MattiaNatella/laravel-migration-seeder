@@ -15,7 +15,7 @@
             <div class="train">
                 <h2>Treno {{ $train['codice_treno'] }}</h2>
                 <p>Stazione di Partenza: {{ $train['stazione_partenza'] }}</p>
-                <p>Stazione di Partenza: {{ $train['stazione_arrivo'] }}</p>
+                <p>Stazione di Arrivo: {{ $train['stazione_arrivo'] }}</p>
                 <p>Orario di Partenza: {{ $train['orario_partenza'] }}</p>
                 <p>Orario di Arrivo: {{ $train['orario_arrivo'] }}</p>
             </div>
