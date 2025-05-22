@@ -14,7 +14,7 @@ class TrainTableSeeder extends Seeder
      */
     public function run(Faker $faker): void
     {
-
+        $trains = []; // array per debug
         for ($i = 0; $i < 25; $i++) {
 
             $newTrain = new Train();
@@ -28,13 +28,17 @@ class TrainTableSeeder extends Seeder
             $newTrain->codice_treno = $faker->bothify('??-##########');
             $newTrain->totale_carrozze = $faker->numberBetween(7, 20);
             $newTrain->tipo_treno = $faker->word();
-            $newTrain->stato_treno = $faker->boolean(0.5);
-            $newTrain->cancellato = $faker->boolean(0.5);
-            $newTrain->in_ritardo = $faker->boolean(0.5);
+            $newTrain->stato_treno = $faker->boolean(50);
+            $newTrain->cancellato = $faker->boolean(50);
+            $newTrain->in_ritardo = $faker->boolean(50);
 
             $newTrain->save();
+            // Aggiungi all'array per debug
+            $trains[] = $newTrain->toArray();
+
         }
 
-
+        // Debug alla fine di tutti i treni
+        dd($trains);
     }
 }

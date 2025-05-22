@@ -22,6 +22,7 @@
                     <div class="col border border-5 border-info rounded-2 p-1 m-1">
 
                         <h2>Treno {{ $train['codice_treno'] }}</h2>
+                        <p>Data di Partenza: {{ $train['data_di_partenza'] }}</p>
                         <p>Stazione di Partenza: {{ $train['stazione_partenza'] }}</p>
                         <p>Stazione di Arrivo: {{ $train['stazione_arrivo'] }}</p>
                         <p>Orario di Partenza: {{ $train['orario_partenza'] }}</p>

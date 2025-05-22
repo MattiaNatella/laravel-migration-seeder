@@ -22,9 +22,9 @@ return new class extends Migration {
             $table->string('codice_treno', 15)->unique();
             $table->integer('totale_carrozze');
             $table->string('tipo_treno');
-            $table->string('stato_treno');
-            $table->boolean('cancellato')->default(false);
-            $table->boolean('in_ritardo')->default(false);
+            $table->boolean('stato_treno');
+            $table->boolean('cancellato');
+            $table->boolean('in_ritardo');
 
         });
     }
